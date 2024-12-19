@@ -29,7 +29,7 @@ const LoginScreen = () => {
               console.log(expirationTime.toString());
               console.log(taxId.toString());
               console.log(email.toString());
-
+              navigate('/dashboard');
 
             } else {
                 setError('Fehler', message || 'Unbekannter Fehler');
@@ -41,7 +41,7 @@ const LoginScreen = () => {
             
           }
           console.log("click on login");
-          navigate('/dashboard');
+          
     };
 
     return (
