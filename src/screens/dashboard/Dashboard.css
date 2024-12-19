@@ -33,7 +33,7 @@
     align-items: center;
     text-decoration: none;
     color: #6c757d; /* Neutral text color */
-    font-size: calc(14px + 1vw); /* Responsive font size */
+    font-size: calc(10+ 1vw); /* Responsive font size */
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
     padding: 1px;
     border-radius: 10px;
@@ -56,10 +56,29 @@
 
 .bottom-nav-item span {
     margin-top: 5px;
-    font-size: 1.25rem;
+    font-size: calc(8px + 1vw); 
 }
 
 .nav-icon {
-    font-size: calc(18px + 1vw); /* Responsive icon size */
+    font-size: calc(20px + 4vw); /* Responsive icon size */
     margin-bottom: 5px;
+}
+
+
+@media (min-width: 600px) {
+    .bottom-nav-item span {
+        font-size: calc(18px + 1vw); /* Slightly smaller for larger screens */
+    }
+    .nav-icon {
+        font-size: calc(30px + 1.5vw);
+    }
+}
+
+@media (min-width: 1200px) {
+    .bottom-nav-item span {
+        font-size: calc(16px + 1vw); /* Even smaller for ultra-large screens */
+    }
+    .nav-icon {
+        font-size: calc(5px + 3vw);
+    }
 }
