@@ -1,14 +1,65 @@
-.tab {
-    margin-right: 20px;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: gray;
-    border: 1px solid lightgray;
-    border-radius: 5px;
+/* General styles */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light background */
 }
 
-.active-tab {
-    background-color: lightblue;
-    color: black;
-    border: 1px solid blue;
+.content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #fff; /* White content background */
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e9ecef; /* Light gray background */
+    border-top: 1px solid #ced4da; /* Light border */
+    
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #6c757d; /* Neutral text color */
+    font-size: calc(14px + 1vw); /* Responsive font size */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+    padding: 1px;
+    border-radius: 10px;
+    width: 20%;
+    text-align: center;
+    margin: 2px;
+    
+}
+
+.bottom-nav-item:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white;
+}
+
+.bottom-nav-item.active {
+    background-color: #007bff; /* Blue background for active */
+    color: white;
+    font-weight: bold; /* Bold text for active state */
+}
+
+.bottom-nav-item span {
+    margin-top: 5px;
+    font-size: 1.25rem;
+}
+
+.nav-icon {
+    font-size: calc(18px + 1vw); /* Responsive icon size */
+    margin-bottom: 5px;
 }
