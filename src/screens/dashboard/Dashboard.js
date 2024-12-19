@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 import { FaHome, FaBriefcase, FaUsers, FaArchive, FaSignOutAlt } from 'react-icons/fa';
 import Overview from './overview/Overview';
 import Employer from './employer/Employer';
@@ -14,12 +14,13 @@ const Dashboard = () => {
             {/* Main Content */}
             <div className="content">
                 <Routes>
-                    <Route path="/" element={<Overview />} /> {/* Default route */}
+                    <Route path="/" element={<Navigate to="/dashboard/overview" />} /> {/* Default route */}
                     <Route path="overview" element={<Overview />} />
                     <Route path="employer" element={<Employer />} />
                     <Route path="employee" element={<Employee />} />
                     <Route path="archiv" element={<Archiv />} />
                     <Route path="logout" element={<Logout />} />
+                    <Route path="*" element={<Navigate to="/dashboard/overview" />} />
                 </Routes>
             </div>
 
