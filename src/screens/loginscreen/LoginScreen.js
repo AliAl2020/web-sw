@@ -40,6 +40,7 @@ const LoginScreen = () => {
           } finally {
             
           }
+          console.log("click on login");
           navigate('/dashboard');
     };
 
