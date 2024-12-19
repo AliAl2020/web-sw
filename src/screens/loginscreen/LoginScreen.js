@@ -14,7 +14,8 @@ const LoginScreen = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post(Config.LOGIN_URL, { email, password });
+            const response = await axios.post(Config.LOGIN_URL, { email:email, password:password });
+            console.log(response.data);
             const { token, message } = response.data;
       
             if (response.status === 200) {
@@ -64,6 +65,8 @@ const LoginScreen = () => {
                     id="email"
                     placeholder="Email"
                     required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)} 
                 />
                 <label htmlFor="email">Email</label>
             </div>
@@ -75,6 +78,8 @@ const LoginScreen = () => {
                     id="password"
                     placeholder="Password"
                     required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                 />
                 <label htmlFor="password">Passwort</label>
             </div>
