@@ -1,0 +1,14 @@
+.tab {
+    margin-right: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: gray;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.active-tab {
+    background-color: lightblue;
+    color: black;
+    border: 1px solid blue;
+}

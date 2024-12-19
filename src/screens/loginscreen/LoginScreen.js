@@ -4,11 +4,13 @@ import Image1 from '../../assets/images/Image1.png';
 import axios from 'axios';
 import { Config} from '../../conf/Config';
 import { jwtDecode }from 'jwt-decode';
+import { useNavigate } from 'react-router-dom';
 const LoginScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-
+    const navigate = useNavigate();
+    
     const handleLogin =async (e) => {
 
         e.preventDefault();
@@ -38,7 +40,7 @@ const LoginScreen = () => {
           } finally {
             
           }
-        
+          navigate('/dashboard');
     };
 
     return (
