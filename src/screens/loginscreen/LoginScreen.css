@@ -1,0 +1,102 @@
+/* Centering the login card */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Styling the login card */
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+/* Additional styling for elements */
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-card .btn {
+    font-size: 16px;
+    padding: 10px;
+}
+
+.login-card p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Style the login heading */
+.card h2 {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Style the title */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Optional: Adjust logo spacing */
+.img-fluid {
+    max-width: 50px;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.responsive-logo {
+    width: auto; /* Allow width to scale naturally */
+    max-width: 150px; /* Limit maximum size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper rendering */
+}
+/* For smaller screens */
+@media (min-width: 1024px) {
+    .responsive-logo {
+        max-width: 200px; /* Scale up for larger devices */
+    }
+}
+
+/* For smaller screens (tablets) */
+@media (max-width: 768px) {
+    .responsive-logo {
+        max-width: 100px; /* Adjust size for smaller devices */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 576px) {
+    .responsive-logo {
+        max-width: 80px; /* Scale down for small screens */
+    }
+}
+
+.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure the container spans the full width */
+}
