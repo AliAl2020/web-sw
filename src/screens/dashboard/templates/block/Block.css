@@ -1,0 +1,21 @@
+/* Generic wrapper for the block */
+.block-wrapper {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 16px 0;
+    background-color: #f9f9f9; /* Neutral background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Container for the block's content */
+  .block-container {
+    padding: 16px; /* Generic padding */
+  }
+  
+  /* Generic content styles */
+  .block-content {
+    color: #333; /* Neutral text color */
+    line-height: 1.5; /* Comfortable line spacing */
+    font-size: 1rem; /* Standard font size */
+  }
+  

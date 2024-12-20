@@ -3,6 +3,7 @@ import  {getUserInfo}  from '../graphql/getUserInfo';
 import React, {  useContext, useEffect, useState   } from 'react';
 import { GlobalContext } from '../../../context/GlobalContext';
 import { useLocation   } from 'react-router-dom';
+import PersonalInformationTemplate from '../templates/person/PersonalInformationTemplate.js';
 const Overview = () => {
         const [email, setEmail] = useState('');
         const [userToken, setuserToken] = useState('');
@@ -43,9 +44,27 @@ const Overview = () => {
     }, [location.key]);
 
     return(<MainTemplate>
-
-userInfo is: {JSON.stringify(userInfo, null, 2)}
-    </MainTemplate>)
+<PersonalInformationTemplate   taxId={userInfo?.steuer_id || 'Nicht verfügbar'}
+  vorname={userInfo?.vorname || 'Nicht verfügbar'}
+  nachname={userInfo?.nachname || 'Nicht verfügbar'} />
+  <PersonalInformationTemplate   taxId={userInfo?.steuer_id || 'Nicht verfügbar'}
+  vorname={userInfo?.vorname || 'Nicht verfügbar'}
+  nachname={userInfo?.nachname || 'Nicht verfügbar'} />
+    <PersonalInformationTemplate   taxId={userInfo?.steuer_id || 'Nicht verfügbar'}
+  vorname={userInfo?.vorname || 'Nicht verfügbar'}
+  nachname={userInfo?.nachname || 'Nicht verfügbar'} />
+    <PersonalInformationTemplate   taxId={userInfo?.steuer_id || 'Nicht verfügbar'}
+  vorname={userInfo?.vorname || 'Nicht verfügbar'}
+  nachname={userInfo?.nachname || 'Nicht verfügbar'} />
+      <PersonalInformationTemplate   taxId={userInfo?.steuer_id || 'Nicht verfügbar'}
+  vorname={userInfo?.vorname || 'Nicht verfügbar'}
+  nachname={userInfo?.nachname || 'Nicht verfügbar'} />
+      <PersonalInformationTemplate   taxId={userInfo?.steuer_id || 'Nicht verfügbar'}
+  vorname={userInfo?.vorname || 'Nicht verfügbar'}
+  nachname={userInfo?.nachname || 'Nicht verfügbar'} />
+    </MainTemplate>
+    
+)
         
     }
     

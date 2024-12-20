@@ -1,0 +1,138 @@
+/* Main wrapper for Personal Information Template */
+.personal-information-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px ;
+    width: 100%; /* Occupies 40% of MainTemplate */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: Arial, sans-serif; /* Font consistency */
+    padding: 16px; /* Inner padding */
+  }
+  
+  /* Block-specific styles */
+  .personal-information-container .block-wrapper {
+    width: 100%; /* Full width of the personal-information container */
+    margin: 0 auto;
+  }
+  
+  /* Block container padding */
+  .personal-information-container .block-container {
+    padding: 12px; /* Inner padding for the block */
+  }
+  
+  /* Menu container styles */
+  .personal-information-container .menu-container {
+    background-color: #ddd; /* Blue background for the menu */
+    color: black; /* White text for contrast */
+    padding: 8px 16px; /* Adjusted padding for compact layout */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    display: flex; /* Flex layout for header */
+    justify-content: space-between; /* Space between title and buttons */
+    align-items: center; /* Vertical alignment */
+  }
+  
+  /* Menu title styling */
+  .personal-information-container .menu-title {
+    font-size: 1.2rem; /* Title font size */
+    font-weight: bold; /* Emphasize title */
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* Menu buttons container */
+  .personal-information-container .menu-buttons {
+    display: flex; /* Flex layout for buttons */
+    gap: 8px; /* Space between buttons */
+  }
+  
+  /* Individual menu button styling */
+  .personal-information-container .menu-button {
+    background-color: white; /* White button background */
+    color: #555;; /* Blue text */
+    border: none; /* No border for cleaner design */
+    border-radius: 4px; /* Rounded button corners */
+    padding: 4px 8px; /* Compact padding */
+    font-size: 0.9rem; /* Smaller button font */
+    cursor: pointer; /* Pointer cursor for interaction */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+  }
+  
+  .personal-information-container .menu-button:hover {
+    background-color: #e7e7e7; /* Slightly darker background on hover */
+  }
+  
+  .personal-information-container .menu-button:active {
+    background-color: #ddd; /* Darker background on click */
+  }
+  
+  /* Content styles for Personal Information */
+  .personal-information-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    gap: 12px; /* Space between items */
+    font-size: 1rem; /* Default font size */
+    color: #555; /* Neutral text color */
+    line-height: 1.4; /* Improved readability */
+  }
+  
+  /* Individual content item styling */
+  .personal-information-item {
+    display: flex; /* Flex layout for label and value */
+    justify-content: space-between; /* Space between label and value */
+    align-items: center; /* Vertical alignment */
+    font-size: 0.9rem; /* Font size for items */
+  }
+  
+  /* Label styling */
+  .personal-information-item strong {
+    font-weight: bold; /* Emphasize label */
+    color: #333; /* Darker color for labels */
+  }
+  
+  /* Value styling */
+  .personal-information-item span {
+    color: #555;; /* Match the menu color for values */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .personal-information-container {
+      width: 90%; /* Expand width for smaller screens */
+      padding: 12px; /* Adjust padding for mobile */
+    }
+  
+    .personal-information-container .menu-title {
+      font-size: 1rem; /* Smaller font for mobile */
+    }
+  
+    .personal-information-container .menu-button {
+      font-size: 0.8rem; /* Smaller button font for mobile */
+    }
+  
+    .personal-information-content {
+      font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
+  }
+  
+  /* Print-specific styles */
+  @media print {
+    .personal-information-container {
+      border: none; /* Remove borders for printing */
+      box-shadow: none; /* Remove shadows for printing */
+      background-color: white; /* White background for printing */
+    }
+  
+    .menu-container {
+      background-color: transparent; /* Remove menu background */
+      box-shadow: none; /* Remove menu shadow */
+      color: black; /* Black text for printing */
+    }
+  
+    .menu-buttons {
+      display: none; /* Hide buttons during printing */
+    }
+  }
+  
