@@ -76,9 +76,9 @@
 
 @media (min-width: 1200px) {
     .bottom-nav-item span {
-        font-size: calc(16px + 1vw); /* Even smaller for ultra-large screens */
+        font-size: calc(13px + 0.7vw); /* Even smaller for ultra-large screens */
     }
     .nav-icon {
-        font-size: calc(5px + 3vw);
+        font-size: calc(5px + 2vw);
     }
 }

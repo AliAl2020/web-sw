@@ -3,9 +3,12 @@ import './App.css';
 import LoginScreen from './screens/loginscreen/LoginScreen';
 import Dashboard from './screens/dashboard/Dashboard';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { GlobalProvider } from './context/GlobalContext';
+
 function App() {
   return (
     <div className="App">
+       <GlobalProvider>
         <Router>
             <Routes>
                 <Route path="/web/login" element={<LoginScreen />} />
@@ -14,7 +17,7 @@ function App() {
 
             </Routes>
         </Router>
-      
+        </GlobalProvider>
     </div>
   );
 }

@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState,useContext  } from 'react';
 import './LoginScreen.css'; // Optional for custom styles
 import Image1 from '../../assets/images/Image1.png';
 import axios from 'axios';
 import { Config} from '../../conf/Config';
 import { jwtDecode }from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';
+import { GlobalContext } from '../../context/GlobalContext';
 const LoginScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
-    
+    const { globalState, setGlobalState } = useContext(GlobalContext);
     const handleLogin =async (e) => {
 
         e.preventDefault();
@@ -26,9 +27,12 @@ const LoginScreen = () => {
               const expirationTime = decodedToken.exp;
               const taxId = decodedToken.steuer_id;
               const email = decodedToken.email;
+              const status = response.status.toString();
               console.log(expirationTime.toString());
               console.log(taxId.toString());
               console.log(email.toString());
+              console.log(status)
+              setGlobalState({ ...globalState, token, email,taxId,expirationTime,status });
               navigate('/web/dashboard');
 
             } else {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext , useEffect } from 'react';
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 import { FaHome, FaBriefcase, FaUsers, FaArchive, FaSignOutAlt } from 'react-icons/fa';
 import Overview from './overview/Overview';
@@ -7,8 +7,25 @@ import Employee from './employee/Employee';
 import Archiv from './archiv/Archiv';
 import Logout from './logout/Logout';
 import './Dashboard.css';
-
+import { useNavigate } from 'react-router-dom';
+import { GlobalContext } from '../../context/GlobalContext';
 const Dashboard = () => {
+
+    const { globalState } = useContext(GlobalContext);
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+        // Initialization and validation
+        if (!globalState.token || globalState.status !== "200" || !globalState.email || !globalState.taxId ) {
+            console.warn('Invalid token or status. Redirecting to login...');
+            navigate('/web/login'); // Redirect to login if validation fails
+            console.warn(globalState.taxId);
+            console.warn(globalState.token);
+            console.warn(globalState.email);
+            console.warn(globalState.status);
+        }
+    }, [globalState, navigate]); 
+    console.log('usecontext', globalState)
     return (
         <div className="dashboard-container">
             {/* Main Content */}
