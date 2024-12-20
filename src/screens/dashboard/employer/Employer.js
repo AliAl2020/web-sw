@@ -1,10 +1,11 @@
+import MainTemplate from '../templates/maintamplate/MainTemplate.js';
 const Employer = () => {
 
 
-    return(<div>
-    
+    return(<MainTemplate>
+
         Employer
-    </div>)
+    </MainTemplate>)
         
     }
     
