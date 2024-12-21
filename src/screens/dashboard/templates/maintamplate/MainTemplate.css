@@ -28,3 +28,10 @@
   overflow: hidden;
   box-sizing: border-box; /* Ensure content stays within item boundaries */
 }
+.main-template-container {
+  cursor: grab;
+}
+
+.main-template-container:active {
+  cursor: grabbing;
+}

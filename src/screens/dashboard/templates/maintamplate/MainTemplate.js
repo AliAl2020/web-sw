@@ -13,6 +13,7 @@ const MainTemplate = ({ children }) => {
         setIsDraggable(true);
       }
     };
+
     const handleKeyUp = (e) => {
       if (e.key === "Shift") {
         setIsDraggable(false);
@@ -53,6 +54,7 @@ const MainTemplate = ({ children }) => {
         isDraggable={isDraggable}
         isResizable={true}
         containerPadding={[16, 16]}
+        draggableCancel=".block-content" // Prevent dragging within specific block content
       >
         {children.map((child, index) => (
           <div key={`block-${index}`} className="grid-item">
