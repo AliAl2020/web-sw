@@ -39,29 +39,29 @@ const MainTemplate = ({ children }) => {
 
   return (
     <div className="main-template-container">
-      <ResponsiveReactGridLayout
-        className="layout"
-        cols={{ lg: 12, md: 8, sm: 6, xs: 2, xxs: 1 }}
-        rowHeight={150}
-        layouts={{
-          lg: layout,
-          md: layout,
-          sm: layout,
-          xs: layout,
-          xxs: layout,
-        }}
-        margin={[16, 16]}
-        isDraggable={isDraggable}
-        isResizable={true}
-        containerPadding={[16, 16]}
-        draggableCancel=".block-content" // Prevent dragging within specific block content
-      >
-        {children.map((child, index) => (
-          <div key={`block-${index}`} className="grid-item">
-            {child}
-          </div>
-        ))}
-      </ResponsiveReactGridLayout>
+<ResponsiveReactGridLayout
+  className="layout"
+  cols={{ lg: 12, md: 8, sm: 6, xs: 2, xxs: 1 }}
+  rowHeight={150}
+  layouts={{
+    lg: layout,
+    md: layout,
+    sm: layout,
+    xs: layout,
+    xxs: layout,
+  }}
+  margin={[16, 16]}
+  isDraggable={isDraggable}
+  isResizable={true}
+  containerPadding={[16, 16]}
+>
+  {children.map((child, index) => (
+    <div key={`block-${index}`} className="grid-item">
+      {child}
+    </div>
+  ))}
+</ResponsiveReactGridLayout>
+
     </div>
   );
 };

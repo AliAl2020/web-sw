@@ -35,3 +35,10 @@
 .main-template-container:active {
   cursor: grabbing;
 }
+
+.grid-item {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center;    /* Vertically center the content */
+  height: 100%;           /* Ensure the container takes full height */
+}
