@@ -5,29 +5,28 @@ import Block from '../block/Block'; // Import the Block component
 
 const PersonalInformationTemplate = ({ taxId, vorname, nachname }) => {
   return (
-    <div className="personal-information-container">
-    <Block>
-         
-      {{
-        title: "Persönliche Informationen",
-        content: (
-          <div className="personal-information-content">
-            <div className="personal-information-item">
-              <strong>Steuer-ID:</strong>
-              <span>{taxId || 'Nicht verfügbar'}</span>
+    <div className="personal-information-container row justify-content-md-center">
+      <Block>
+        {{
+          title: "Persönliche Informationen",
+          content: (
+            <div className="personal-information-content">
+              <div className="personal-information-item">
+                <strong>Steuer-ID:</strong>
+                <span>{taxId || 'Nicht verfügbar'}</span>
+              </div>
+              <div className="personal-information-item">
+                <strong>Vorname:</strong>
+                <span>{vorname || 'Nicht verfügbar'}</span>
+              </div>
+              <div className="personal-information-item">
+                <strong>Nachname:</strong>
+                <span>{nachname || 'Nicht verfügbar'}</span>
+              </div>
             </div>
-            <div className="personal-information-item">
-              <strong>Vorname:</strong>
-              <span>{vorname || 'Nicht verfügbar'}</span>
-            </div>
-            <div className="personal-information-item">
-              <strong>Nachname:</strong>
-              <span>{nachname || 'Nicht verfügbar'}</span>
-            </div>
-          </div>
-        ),
-      }}
-    </Block>
+          ),
+        }}
+      </Block>
     </div>
   );
 };

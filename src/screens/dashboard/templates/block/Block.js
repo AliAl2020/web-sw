@@ -4,7 +4,11 @@ import React, { useState } from 'react';
 import html2pdf from 'html2pdf.js';
 import { FaPrint, FaMinus, FaPlus } from 'react-icons/fa';
 
+import { ResizableBox } from 'react-resizable';
+import 'react-resizable/css/styles.css'; // Required for default styling
+
 const Block = ({ children }) => {
+    const [width, setWidth] = useState(300);
   const { title, content } = children;
   const [isMinimized, setIsMinimized] = useState(false);
 
@@ -26,6 +30,15 @@ const Block = ({ children }) => {
   };
 
   return (
+    <ResizableBox
+    width={width}
+    //height={200} // Fixed height
+    axis="x" // Allow resizing only horizontally
+    resizeHandles={['e','w']} // Resize from the right edge
+    //minConstraints={[200, 200]} // Minimum width and height
+    //maxConstraints={[600, 200]} // Maximum width and height
+    onResizeStop={(e, data) => setWidth(data.size.width)} // Update state on resize
+  >
     <div id={`block-${title}`} className="block-wrapper">
       <Menu
         title={title}
@@ -33,10 +46,11 @@ const Block = ({ children }) => {
         onExportPdf={handleExportPdf}
         minimizeIcon={isMinimized ? <FaPlus /> : <FaMinus />}
       />
-      <div className={`block-container ${isMinimized ? 'minimized' : ''}`}>
+      <div className={`overflow-auto block-container ${isMinimized ? 'minimized' : ''}`}>
         {!isMinimized && <div className="block-content">{content}</div>}
       </div>
     </div>
+    </ResizableBox>
   );
 };
 
