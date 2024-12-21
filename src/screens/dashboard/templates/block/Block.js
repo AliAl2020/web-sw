@@ -30,15 +30,7 @@ const Block = ({ children }) => {
   };
 
   return (
-    <ResizableBox
-    width={width}
-    //height={200} // Fixed height
-    axis="x" // Allow resizing only horizontally
-    resizeHandles={['e','w']} // Resize from the right edge
-    //minConstraints={[200, 200]} // Minimum width and height
-    //maxConstraints={[600, 200]} // Maximum width and height
-    onResizeStop={(e, data) => setWidth(data.size.width)} // Update state on resize
-  >
+
     <div id={`block-${title}`} className="block-wrapper">
       <Menu
         title={title}
@@ -50,7 +42,7 @@ const Block = ({ children }) => {
         {!isMinimized && <div className="block-content">{content}</div>}
       </div>
     </div>
-    </ResizableBox>
+    
   );
 };
 

@@ -1,25 +1,24 @@
 .main-template-container {
-    background-color: #e8eff7; /* Soft pale blue-gray background for the whole page */
-    height: calc(100vh - 100px); /* Adjust height to exclude the navbar (replace 60px with the height of your navbar) */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Arial', sans-serif;
-    overflow-y: auto; /* Add scrolling if needed */
-    
-    padding-bottom: 10cap;
-  }
-  
-  .main-template-content {
-    background-color: #edf7f6; /* Soft pastel teal */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Softer shadow for more depth */
-    padding: 24px; /* Padding for inner spacing */
-    width: 90%; /* Responsive width */
-    font-size: 1rem; /* Base font size */
-    color: #2f2f2f; /* Dark gray text color */
-    margin-top: 20px;
-    margin-bottom: 60px; /* Add margin to prevent overlapping with navbar */
-  }
-  
+  background-color: #e8eff7; /* Soft pale blue-gray background for the whole page */
+  height: calc(100vh - 100px); /* Adjust height to exclude navbar */
+  font-family: 'Arial', sans-serif;
+  overflow-y: auto; /* Add scrolling if needed */
+}
+
+.react-grid-layout {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: space-between; /* Ensure items are spaced evenly */
+  gap: 16px; /* Space between items */
+}
+
+.react-grid-item {
+  border: 1px solid #ccc; /* Add border to grid items */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 16px; /* Add padding inside the block */
+  background-color: #fff; /* White background for blocks */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+}

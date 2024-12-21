@@ -1,10 +1,8 @@
 /* Generic wrapper for the block */
 .block-wrapper {
-    border: 1px solid #ccc;
     border-radius: 8px;
     margin: 16px 0;
     background-color: #f9f9f9; /* Neutral background color */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
   
   /* Container for the block's content */

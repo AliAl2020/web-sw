@@ -5,6 +5,7 @@ import Block from '../block/Block'; // Import the Block component
 
 const PersonalInformationTemplate = ({ taxId, vorname, nachname }) => {
   return (
+    
     <div className="personal-information-container row justify-content-md-center">
       <Block>
         {{
@@ -28,6 +29,7 @@ const PersonalInformationTemplate = ({ taxId, vorname, nachname }) => {
         }}
       </Block>
     </div>
+    
   );
 };
 
