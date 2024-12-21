@@ -42,3 +42,10 @@
   align-items: center;    /* Vertically center the content */
   height: 100%;           /* Ensure the container takes full height */
 }
+.custom-grid-item {
+  padding: 16px; /* Apply equal padding to all sides */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid #ccc; /* Border for clarity */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fff; /* White background */
+}

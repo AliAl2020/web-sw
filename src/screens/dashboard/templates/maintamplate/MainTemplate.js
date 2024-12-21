@@ -42,12 +42,12 @@ const MainTemplate = ({ children }) => {
   }));
 
   return (
-    <div className="main-template-container">
+    <div className="main-template-container ">
       {processedChildren.length > 0 ? (
         <ResponsiveReactGridLayout
-          className="layout"
+          className="layout "
           cols={{ lg: 12, md: 8, sm: 6, xs: 2, xxs: 1 }}
-          rowHeight={150}
+          rowHeight={90}
           layouts={{
             lg: layout,
             md: layout,
@@ -55,10 +55,10 @@ const MainTemplate = ({ children }) => {
             xs: layout,
             xxs: layout,
           }}
-          margin={[16, 16]}
+          margin={[10, 10,10,10]}
           isDraggable={isDraggable}
           isResizable={true}
-          containerPadding={[16, 16]}
+          containerPadding={[10, 10,10,10]}
         >
           {processedChildren.map((child, index) => (
             <div key={`block-${index}`} className="grid-item">
